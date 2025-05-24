@@ -18,194 +18,15 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 <html>
     <head>
         <meta charset='utf-8'>
-        <title>AchRaf Exploit For PS4 9.00</title>
+        <title>AchRaF Exploit For PS4 9.00</title>
         <style>
-				 @keyframes rainbowGlow {
-    0% {
-      text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
-      color: #ff0000;
-    }
-    25% {
-      text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
-      color: #00ff00;
-    }
-    50% {
-      text-shadow: 0 0 5px #0000ff, 0 0 10px #0000ff, 0 0 20px #0000ff;
-      color: #0000ff;
-    }
-    75% {
-      text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff;
-      color: #ff00ff;
-    }
-    100% {
-      text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
-      color: #ff0000;
-    }
-  }
-
-  @keyframes zoomIn {
-    0% {
-      transform: scale(0.5) translateX(-50%);
-      opacity: 0;
-    }
-    100% {
-      transform: scale(1) translateX(-50%);
-      opacity: 1;
-    }
-  }
-
- @keyframes float {
-  0%   { transform: translate(-50%, -50%) translateY(0); }
-  50%  { transform: translate(-50%, -50%) translateY(-10px); }
-  100% { transform: translate(-50%, -50%) translateY(0); }
-}
-
-@keyframes scroll {
-  0%   { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-
-@keyframes rainbowGlow {
-  0%   { color: #ff0000; text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
-  25%  { color: #00ff00; text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; }
-  50%  { color: #0000ff; text-shadow: 0 0 10px #0000ff, 0 0 20px #0000ff; }
-  75%  { color: #ff00ff; text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; }
-  100% { color: #ff0000; text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
-}
-.welcome-banner {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 50px;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-family: Arial, sans-serif;
-  background-color: #000;
-  padding: 10px 30px;
-  border-radius: 10px;
-  white-space: nowrap;
-  text-align: center;
-  animation: glowRainbow 5s linear infinite;
-  text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
-  color: #000;
-}
-
-@keyframes glowRainbow {
-  0%   { color: #ff0000; }
-  20%  { color: #ff9900; }
-  40%  { color: #33cc33; }
-  60%  { color: #00ccff; }
-  80%  { color: #9933ff; }
-  100% { color: #ff0000; }
-}
-
-.no-usb {
-  color: #ff0000;
-  text-shadow: 0 0 5px #ff0000, 0 0 15px #ff0000, 0 0 25px #ff0000;
-  animation: none;
-}
-
-
-@keyframes glowRainbow {
-  0%   { color: #ff0000; } /* أحمر */
-  20%  { color: #ff9900; } /* برتقالي */
-  40%  { color: #33cc33; } /* أخضر */
-  60%  { color: #00ccff; } /* سماوي */
-  80%  { color: #9933ff; } /* بنفسجي */
-  100% { color: #ff0000; } /* أحمر */
-}
-
-
-
-@keyframes glowColor {
-  0%   { color: #ff0000; text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
-  25%  { color: #00ff00; text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; }
-  50%  { color: #0000ff; text-shadow: 0 0 10px #0000ff, 0 0 20px #0000ff; }
-  75%  { color: #ff00ff; text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; }
-  100% { color: #ff0000; text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
-}
-
-
-
-
-.marquee-container {
-  position: absolute;
-  top: 30%;
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  background: rgba(0, 0, 0, 0.3);
-  padding: 25px 0;
-  border-radius: 20px; /* ← حواف ناعمة */
-  border: 3px solid #fff;
-  box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff; /* ← توهج الحدود */
-}
-.usb-icon {
-  position: absolute;
-  top: 77%;
-  left: 55%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.usb-icon img {
-  width: 250px;
-  height: auto;
-  animation: spin 6s linear infinite, glowColors 4s linear infinite;
-  transition: transform 0.3s ease;
-}
-
-.usb-icon img:hover {
-  animation-play-state: paused; /* توقف الدوران والتوهج عند تمرير الفأرة */
-}
-
-@keyframes spin {
-  0%   { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-@keyframes glowColors {
-  0%   { filter: drop-shadow(0 0 10px red); }
-  25%  { filter: drop-shadow(0 0 10px orange); }
-  50%  { filter: drop-shadow(0 0 10px green); }
-  75%  { filter: drop-shadow(0 0 10px blue); }
-  100% { filter: drop-shadow(0 0 10px red); }
-}
-
-
-.marquee-text {
-  display: inline-block;
-  font-size: 42px;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-family: Arial, sans-serif;
-  animation:
-    scroll 20s linear infinite,
-    rainbowGlow 3s infinite;
-}
-
-
-
-
-
-
             @font-face {
                 font-family: 'logging';
                 src: url('fonts/LiberationMono-Regular.ttf');
             }
-		body{
-			background-image: url('background.jpg'); /* <-- change ce nom si besoin */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            color: white; /* pour que le texte reste lisible si l'image est sombre */
-            font-family: Arial, sans-serif; 
-			
-		}
             #console {
                 font-family: 'logging';
-          }
+            }
         </style>
         <script>
         if (window.applicationCache.status=='0')
@@ -215,21 +36,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
         </script>
     </head>
     <body>
-<div class="usb-icon">
-  <img src="usb.png" alt="USB Icon">
-</div>
-
-	<div class="welcome-banner">
-  Welcome to AchRaF31 Host 		<span class="no-usb">(NO USB)</span>
-</div>
-
-	<div class="marquee-container">
-	
-  <div class="marquee-text">HOSTED BY ACHRAF31 ♥ HOSTED BY ACHRAF31 ♥</div>
-
-	</div>
-
-
+        PSFree: AchRaF PS4 Exploit Chain<br>
+        Donation (Monero/XMR):<br>
+        See <a href='./about.html' data-jslicense='1'>JavaScript license information</a> for the
+        source code and license.<br>
+        <pre id='console'></pre>
     </body>
     <script src="./payload.js"></script>
     <script type='module' src='./alert.mjs'></script>
